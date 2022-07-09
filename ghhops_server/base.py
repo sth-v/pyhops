@@ -5,6 +5,7 @@ import os.path as op
 import inspect
 import json
 import base64
+import asyncio
 from typing import Tuple
 
 from ghhops_server.logger import hlogger
@@ -165,7 +166,8 @@ class HopsBase:
         return True, inputs
 
     def _solve(self, comp, inputs):
-        return comp.handler(*inputs)
+        return asyncio.run(comp.handler(*inputs))
+
 
     def _prepare_outputs(self, comp, returns) -> Tuple[bool, str]:
         outputs = []
