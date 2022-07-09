@@ -8,8 +8,8 @@ import base64
 import asyncio
 from typing import Tuple
 
-from ghhops_server.logger import hlogger
-from ghhops_server.component import HopsComponent
+from pyhops.logger import hlogger
+from pyhops.component import HopsComponent
 
 
 DEFAULT_CATEGORY = "Hops"

@@ -11,11 +11,12 @@ This is a python example defining a Hops python component that takes a curve and
 
 ```python
 from flask import Flask
-import ghhops_server as hs
+import pyhops as hs
 
 # register hops app as middleware
 app = Flask(__name__)
 hops = hs.Hops(app)
+
 
 @hops.component(
     "/pointat",
@@ -32,6 +33,7 @@ hops = hs.Hops(app)
 )
 def pointat(curve, t):
     return curve.PointAt(t)
+
 
 if __name__ == "__main__":
     app.run()
@@ -63,10 +65,10 @@ Assuming you have python3 installed on your machine, follow the steps below to c
 3) Let's create a python script and name it `app.py`. We will renamed `ghhops_server` on import to `hs` for simplicity:
 
     ```python
-    # import flask, ghhops_server, and rhino3dm
-    # rhino3dm is automatically installed with ghhops_server
+    # import flask, pyhops, and rhino3dm
+    # rhino3dm is automatically installed with pyhops
     from flask import Flask
-    import ghhops_server as hs
+    import pyhops as hs
     import rhino3dm
     ```
 

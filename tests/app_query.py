@@ -1,6 +1,6 @@
 """Hops flask middleware example"""
 from flask import Flask
-import ghhops_server as hs
+import pyhops as hs
 import rhino3dm
 
 # register hops app as middleware

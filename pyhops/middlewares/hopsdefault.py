@@ -1,6 +1,6 @@
 """Hops builtin HTTP server"""
-import ghhops_server.base as base
-from ghhops_server.logger import logging, hlogger
+import pyhops.base as base
+from pyhops.logger import logging, hlogger
 
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 

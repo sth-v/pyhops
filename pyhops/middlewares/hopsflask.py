@@ -1,5 +1,5 @@
 """Hops flask middleware implementation"""
-import ghhops_server.base as base
+import pyhops.base as base
 
 from werkzeug.wrappers import Request, Response
 

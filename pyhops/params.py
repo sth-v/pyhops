@@ -2,8 +2,8 @@
 import json
 from enum import Enum
 import inspect
-from ghhops_server.base import _HopsEncoder
-from ghhops_server.logger import hlogger
+from pyhops.base import _HopsEncoder
+from pyhops.logger import hlogger
 
 
 __all__ = (

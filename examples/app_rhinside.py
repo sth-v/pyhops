@@ -1,6 +1,6 @@
 """Hops default HTTP server swith rhinoinside example"""
 import rhinoinside
-import ghhops_server as hs
+import pyhops as hs
 
 
 rhinoinside.load()

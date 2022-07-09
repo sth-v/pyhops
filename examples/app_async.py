@@ -1,42 +1,16 @@
-"""Hops flask middleware example"""
+from compute_rhino3d import Intersection
 from flask import Flask
 import pyhops as hs
 import rhino3dm
-
 
 # register hops app as middleware
 app = Flask(__name__)
 hops: hs.HopsFlask = hs.Hops(app)
 
 
-# flask app can be used for other stuff drectly
 @app.route("/help")
-def help():
-    return "Welcome to Grashopper Hops for CPython!"
-
-
-@hops.component(
-    "/binmult",
-    inputs=[hs.HopsNumber("A"), hs.HopsNumber("B")],
-    outputs=[hs.HopsNumber("Multiply")],
-)
-def BinaryMultiply(a: float, b: float):
-    return a * b
-
-
-@hops.component(
-    "/add",
-    name="Add",
-    nickname="Add",
-    description="Add numbers with CPython",
-    inputs=[
-        hs.HopsNumber("A", "A", "First number"),
-        hs.HopsNumber("B", "B", "Second number"),
-    ],
-    outputs=[hs.HopsNumber("Sum", "S", "A + B")]
-)
-def add(a: float, b: float):
-    return a + b
+async def help():
+    return "Welcome to Pyhops async api!"
 
 
 @hops.component(
@@ -51,7 +25,7 @@ def add(a: float, b: float):
     ],
     outputs=[hs.HopsPoint("P", "P", "Point on curve at t")]
 )
-def pointat(curve: rhino3dm.Curve, t=0.0):
+async def pointat(curve: rhino3dm.Curve, t=0.0):
     return curve.PointAt(t)
 
 
@@ -68,10 +42,7 @@ def pointat(curve: rhino3dm.Curve, t=0.0):
     ],
     outputs=[hs.HopsSurface("Surface", "S", "Resulting surface")]
 )
-def ruled_surface(a: rhino3dm.Point3d,
-                  b: rhino3dm.Point3d,
-                  c: rhino3dm.Point3d,
-                  d: rhino3dm.Point3d):
+async def ruled_surface(a: rhino3dm.Point3d,b: rhino3dm.Point3d,c: rhino3dm.Point3d,d: rhino3dm.Point3d):
     edge1 = rhino3dm.LineCurve(a, b)
     edge2 = rhino3dm.LineCurve(c, d)
     return rhino3dm.NurbsSurface.CreateRuledSurface(edge1, edge2)

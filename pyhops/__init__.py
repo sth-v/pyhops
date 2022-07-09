@@ -1,15 +1,15 @@
 """Grasshopper Hops Server"""
 import importlib
-import ghhops_server.base as base
-import ghhops_server.middlewares as hmw
-from ghhops_server import params
-from ghhops_server.logger import logging, hlogger
+import pyhops.base as base
+import pyhops.middlewares as hmw
+from pyhops import params
+from pyhops.logger import logging, hlogger
 
 # import all supported servers for easy typehinting
-from ghhops_server.middlewares import *  # noqa
+from pyhops.middlewares import *  # noqa
 
 # import all supported parameter types for easy access
-from ghhops_server.params import *  # noqa
+from pyhops.params import *  # noqa
 
 
 # main module version for pypi build

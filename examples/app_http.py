@@ -1,5 +1,5 @@
 """Hops default HTTP server example"""
-import ghhops_server as hs
+import pyhops as hs
 import rhino3dm
 
 hops = hs.Hops()
