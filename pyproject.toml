@@ -3,12 +3,12 @@ requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [tool.flit.metadata]
-module = "ghhops_server"
-author = "Robert McNeel & Associates"
-author-email = "ehsan@mcneel.com"
-home-page = "https://github.com/mcneel/compute.rhino3d/tree/master/src/ghhops-server-py"
+module = "pyhops"
+author = "sth-v"
+author-email = "aa@contextmachine.ru"
+home-page = "https://github.com/sth-v/pyhops"
 classifiers = ["License :: OSI Approved :: MIT License"]
-requires = ['rhino3dm']
+requires = ['cmake','dlib','rhino3dm', 'flask', 'requests']
 
 
 [tool.flit.sdist]
