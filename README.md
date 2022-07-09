@@ -1,6 +1,6 @@
-# Grasshopper Hops python servers
+# Pyhops
 
-pyhops is fork by ghhops-server 
+Pyhops is the [ghhops-server](https://github.com/mcneel/compute.rhino3d/tree/master/src/ghhops-server-py) fork 
 
 This python module helps you create python (specifically CPython) functions and use them inside your Grasshopper scripts using the new *Hops* components. This module can use its builtin default HTTP server to serve the functions as Grasshopper components, or act as a middleware to a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app. It can also work alongside `[Rhino.Inside.Cpython](https://discourse.mcneel.com/t/rhino-inside-python/78987) to give full access to the [RhinoCommon API](https://developer.rhino3d.com/api/)
 
@@ -181,4 +181,7 @@ Hops module structure:
 - `params.py` wrappers for supported params
 - `middleware/` supported server backends:
   - handle http GET and POST in each framework
+
+## Reference
+Grasshopper Hops python servers https://github.com/mcneel/compute.rhino3d/tree/master/src/ghhops-server-py
 
