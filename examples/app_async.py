@@ -49,4 +49,4 @@ async def ruled_surface(a: rhino3dm.Point3d,b: rhino3dm.Point3d,c: rhino3dm.Poin
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=443)
